@@ -1,0 +1,136 @@
+/* pages/first/first.wxss */
+.search{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1rpx solid #8f8f8f;
+}
+.logo{
+    width: 25%;
+    height: 100rpx;
+    background-color: hsl(207, 60%, 81%);
+    position: relative;
+    
+}
+.logo-img{
+    height : 90%;
+     position: absolute;
+     width: 40%;
+     left: 30px;
+     top: 3px;
+}
+
+/* 搜索框 */
+ .weui-search-bar {
+    width: 75%;
+    position: relative;
+    padding: 8px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #b2d2ec;
+    
+  }
+  .weui-icon-search {
+    margin-right: 8px;
+    font-size: inherit;
+  }
+  .weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+  }
+  .weui-search-bar__text {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .weui-search-bar__form {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+            flex: auto;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1rpx solid #E6E6EA;
+  }
+  .weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .weui-search-bar__input {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .weui-icon-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 8px;
+    font-size: 0;
+  }
+  .weui-search-bar__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3px;
+    text-align: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+    line-height: 28px;
+    
+  }
+  .weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: 28px;
+    color: #585858;
+    white-space: nowrap;
+    font-size: 30rpx;
+  } 
+
+/* 轮播图 */
+.swiper-item{
+    width:120%;
+    height: auto;
+    display: block;
+  }
+.swiper-box{
+    margin-bottom: 6rpx;
+    position: relative;
+    border-bottom: 5rpx solid #8f8f8f;
+}
+.swiper-box .txt{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #FFFFFF;
+    line-height: 36rpx;
+    background-color: rgba(33, 10, 8, 0.5);
+    font-size: 28rpx;
+    width: 100%;
+}
+
+/* 功能 */
+.func{
+    display: flex;
+}
+.func-box{
+    width: 25%; 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+}
+.func-image{
+    width:40%;
+}
+
