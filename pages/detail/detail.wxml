@@ -1,0 +1,25 @@
+
+<!--pages/detail/detail.wxml-->
+<!-- 页面内容 -->
+<view class="container">
+    <!-- 标题+来源+发布时间+新闻图片 -->
+    <view class="fix">
+        <text class="title">{{info.title}}</text>
+        <view class="source" >来源： {{info.source}} </view>
+        <view class="time" >发布时间： {{info.time}} </view>
+        <image class="news-image" src="{{info.src}}" mode="aspectFit"></image>
+    </view>
+    <!-- 正文 -->
+    <view decode="true" class="detail" user-select="true">{{info.detail}}</view>
+    <!-- 编辑人 -->
+    <view class="author-name">责任编辑： {{info.author}} </view>
+</view>
+ <!-- 评论框 -->
+<view class="comment" style="bottom:{{bottomHeight}}px;">
+    <!-- 输入框 -->
+    <textarea class="textarea" show-confirm-bar="{{false}}" auto-height="true" auto-focus="true" cursor-spacing='0' adjust-position="{{false}}"  placeholder="欢迎发表看法" maxlength="1000" value="{{content}}" bindfocus="bindfocus" bindinput="bindinput" bindblur="bindblur">
+    </textarea>
+    <!-- 发送按钮 -->
+    <button type="primary" class="send_out" style="width: 100rpx;" disabled="{{content?false:true}}" bindtap="sendOut" >
+    发送</button>
+</view>

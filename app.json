@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/first/first",
+    "pages/detail/detail",
+    "pages/map/map",
+    "pages/faxian/faxian",
+    "pages/wode/wode",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "tabBar":{
+      "list":[
+          {
+            "pagePath": "pages/first/first",
+            "text":"首页",
+            "iconPath": "pages/pic/shouye-01.png",
+            "selectedIconPath": "pages/pic/shouye-02.png"
+          },{
+            "pagePath": "pages/map/map",
+            "text":"地图",
+            "iconPath": "pages/pic/chuanwei-01.png",
+            "selectedIconPath": "pages/pic/chuanwei-02.png"
+          },{
+            "pagePath": "pages/faxian/faxian",
+            "text":"发现",
+            "iconPath": "pages/pic/faxian-01.png",
+            "selectedIconPath": "pages/pic/faxian-02.png"
+          },{
+            "pagePath": "pages/wode/wode",
+            "text":"我的",
+            "iconPath": "pages/pic/wode-01.png",
+            "selectedIconPath": "pages/pic/wode-02.png"
+          }
+      ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧船舶",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

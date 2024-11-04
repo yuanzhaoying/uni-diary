@@ -1,0 +1,64 @@
+<!-- user -->
+<view class='user-box'>
+<!-- 头像 -->
+    <view class='user-img'>
+        <image src='/pages/pic/我的/touxiang.jpeg' mode="aspectFill"></image>
+    </view>
+    <!-- 用户信息 -->
+    <view class='user'> 
+        <view class='user-name'>袁赵颖</view>
+        <view class='user-id'>id:202241816213</view>
+    </view>        
+</view>
+<!-- 个人资料 -->
+<view class='per_info'>
+    <view class='per_info_img-01'>
+        <image src='/pages/pic/我的/gerentouxiang_o.png' mode="scaleToFill"></image>
+    </view>
+    <view class='per_info_text'>个人资料</view>      
+    <view class='per_info_img-02'>
+        <image src='/pages/pic/我的/jiantouyou.png' mode="scaleToFill"></image>
+    </view>  
+</view>
+<!-- 常用功能 -->
+<view class="func-box">
+    <view class="func_text">
+        <text space="nbsp" style="line-height: 36px; font-size: 36rpx;"> 常用功能</text>
+    </view>
+    <view class="func-unit-box" style="margin-top:20px;">
+        <block wx:for="{{func_1}}">
+            <view class="func-unit" >
+                <image src='{{item.func_img}}' class="func-image" mode="widthFix"/>  
+                <text  class="func-text">{{item.text}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="func-unit-box">
+        <block wx:for="{{func_2}}">
+            <view class="func-unit" >
+                <image src='{{item.func_img}}' class="func-image" mode="widthFix"/>  
+                <text  class="func-text">{{item.text}}</text>
+            </view>
+        </block>
+    </view>
+</view>
+<!-- 帮助 -->
+<view class='per_info'>
+    <view class='per_info_img-01'>
+        <image src='/pages/pic/我的/bangzhu.png' mode="scaleToFill"></image>
+    </view>
+    <view class='per_info_text'>帮助</view>      
+    <view class='per_info_img-02'>
+        <image src='/pages/pic/我的/jiantouyou.png' mode="scaleToFill"></image>
+    </view>  
+</view>
+<!-- 设置 -->
+<view class='per_info'>
+    <view class='per_info_img-01'>
+        <image src='/pages/pic/我的/shezhi.png' mode="scaleToFill"></image>
+    </view>
+    <view class='per_info_text'>设置</view>      
+    <view class='per_info_img-02'>
+        <image src='/pages/pic/我的/jiantouyou.png' mode="scaleToFill"></image>
+    </view>  
+</view>

@@ -1,0 +1,56 @@
+<!-- 搜索框 -->
+<view class="search">
+    <view class="logo">
+        <image class="logo-img" src='/pages/pic/首页/logo.png' mode="scaleToFill"></image>
+    </view>
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+        <!-- 点击之后，出现input框  -->
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="搜索船源、货源等信息" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                <!-- 输入款字数大于0，则显示清除按钮  -->
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+        <!-- 没点击之前，只是一些文字和图标  -->
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="18"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
+        </view>
+    <!-- 动态出现的“取消”键  -->
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+</view>
+<!-- 新闻轮播图 -->
+<swiper  indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" style="height:{{height}}px;" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="rgba(255,255,255)" class="swiper-box" >  
+    <block wx:for="{{newslist}}" >  
+        <swiper-item bindtap="todetail" data-more="{{item}}">   
+            <image src='{{item.src}}' class="slide-image" mode="widthFix" bindload='setContainerHeight' style='width:100%'/>  
+            <view class="txt">{{item.title}}</view>
+        </swiper-item>  
+    </block>  
+</swiper>
+<!-- 折线图 -->
+<view class="container" style="padding-top: 5px; padding-bottom: 0px;">
+    <ec-canvas style="width: 100%; height: 250px;" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+</view>
+<!-- 功能 -->
+<view class="func">
+    <block wx:for="{{func_1}}">
+        <view class="func-box" >
+            <image src='{{item.func_img}}' class="func-image" mode="widthFix" />  
+            <text  class="func-text">{{item.text}}</text>
+        </view>
+    </block>
+</view>
+<view class="func">
+    <block wx:for="{{func_2}}" >
+        <view class="func-box" >
+            <image src='{{item.func_img}}' class="func-image" mode="widthFix" />  
+            <text  class="func-text">{{item.text}}</text>
+        </view>
+    </block>
+</view>

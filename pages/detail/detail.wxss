@@ -1,0 +1,104 @@
+/* pages/detail/detail.wxss */
+/* pages/news/news_details/news_details.wxss */
+/* 页面内容 */
+.container{
+    padding:0;
+  }
+  /* 图片格式 */
+  .news-image {
+      margin-top: 25rpx;
+    width: 100%;
+    height: 460rpx;
+  }
+  .fix{
+    margin:30rpx 30rpx 0rpx 30rpx;
+  }
+  /* 新闻标题 */
+  .title {
+    font-size: 40rpx;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #313131;
+  }
+  /* 发布时间 */
+  .time{
+    color: #000000;
+    font-size:  28rpx;
+    width: 100%;
+    justify-content: left;
+    margin-top: 4px;
+}  
+/* 正文格式 */
+  .detail {
+    margin:16rpx;
+    line-height: 44rpx;
+    letter-spacing: 1px;
+    font-size: 32rpx;
+    text-align: justify;
+    line-height:2;
+    text-indent:2em;
+  } 
+  /* 编辑人格式 */
+.author-name{
+    color: #8f8f8f;
+    font-size:  28rpx;
+    width: 100%;
+    justify-content: left;
+    margin-left: 25rpx;
+    margin-bottom: 10px;
+}  
+/* 评论 */
+.comment {
+    margin: 0;
+    padding: 16rpx 24rpx;
+    width: 100%;
+    /* height: 92rpx; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1rpx solid #cccccc;
+    border-bottom: 1rpx solid #cccccc;
+    /* padding和border被包含在定义的width和height之内。盒子的实际宽度=设置的width（padding和border不会影响实际宽度） */
+    box-sizing: border-box;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size: 32rpx;
+    transition: all 2s inherit;
+    overflow: hidden;
+    /* 设置为固定定位 */
+    /* position: fixed; */
+    left: 0;
+  }
+/* textarea输入框的样式 */
+.textarea {
+    margin: 0;
+    padding: 11rpx 24rpx;
+    /* 宽度为 父容器的宽度 减去 发送按钮的宽度 减去 (左右内边距和左右边框宽度) 减去 右边外边距*/
+    width: calc(100% - 100rpx - 50rpx - 24rpx);
+    /* textarea 的高度随着文本的内容来改变的 设置一个最小高度60rpx*/
+    min-height: 40.8rpx;
+    /* 设置行高 */
+    line-height: 40.8rpx;
+    /* 取消默样式 */
+    outline: none;
+    border: 1rpx solid #cccccc;
+    border-radius: 15rpx;
+    background-color: #FFFFFF;
+    /* padding和border不被包含在定义的width和height之内。盒子的实际宽度=设置的width+padding+border */
+    box-sizing: content-box;
+    overflow: hidden;
+}
+  /* 发送按钮样式 */
+.send_out {
+    margin: 0;
+    padding: 0;
+    width: 100rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border: 1rpx solid #cccccc;
+    border-radius: 10rpx;
+    /* 将发送按钮固定在底部 */
+    /* position: absolute; */
+    right: 6rpx;
+    /* bottom: 2rpx; */
+  }

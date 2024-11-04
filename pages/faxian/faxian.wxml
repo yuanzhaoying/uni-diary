@@ -1,0 +1,97 @@
+<!-- 选项卡开始 -->
+<view class="swiper-tab">
+<!-- 答题选项 -->
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">答题</view>
+    <!-- 达人选项 -->
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">达人</view>
+    <!-- 资讯选项 -->
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">资讯</view>
+</view>
+<swiper class='swi'  current="{{currentTab}}" style='height:{{widHeight}}' duration="300" bindchange="swiperTab">
+    <!-- 答题 -->
+    <swiper-item>
+        <!-- 进度栏 -->
+        <view class="index-top">
+            <view class="{{index <= curring && curring != 0?'top-blue':'top-currin'}} {{index > 0 && curring < 2?'top-fint':'top-ping'}} {{2 == curring?'top-nux':''}} {{2 < curring?'top-name':''}}" wx:for="{{4}}" wx:key="index">
+                <view class="{{index <= curring?'top-buing':'top-bloc'}}">
+                    <!-- <text style="font-size: 20px;"></text> -->
+                    <span>{{index+1}}</span>
+                </view>
+            </view>
+        </view>
+        <!-- 答题详细设置 -->
+        <view class="centent" wx:for="{{detail}}" wx:key="index" wx:if="{{index == number}}">
+            <view class="centent-title" >{{index+1}}. {{item.title}}</view>
+            <radio-group class="centent-group">
+                <radio class="group-radio" bindtap="radioChange" wx:for="{{item.array}}" wx:for-item="cell" data-index="{{index}}" data-id="{{item.id}}" wx:key="index" checked="{{cell.usname}}">
+                    <span class="radio-span" wx:if="{{index == 0}}">A.</span>
+                    <span class="radio-span" wx:if="{{index == 1}}">B.</span>
+                    <span class="radio-span" wx:if="{{index == 2}}">C.</span>
+                    <span class="radio-span" wx:if="{{index == 3}}">D.</span>
+                    <text >{{cell.name}}</text>
+                </radio>
+            </radio-group>
+        </view>
+        <!-- 下一步 -->
+        <view class="bottom" wx:if="{{number != detail.length}}">
+            <view bindtap="previous" wx:if="{{number != 0}}">上一题</view>
+            <view bindtap="nextstep" style="{{number == 0?'margin:0 30%;':''}}">下一题</view>
+        </view>
+        <!-- 提交 -->
+        <view class="submission" wx:if="{{number == detail.length}}">
+            <view>
+                <image src="/pages/pic/我的/touxiang.jpeg"></image>
+            </view>   
+            <view class="submission-center" bindtap="subsic">提交答案</view>
+        </view>
+    </swiper-item>
+    <!-- 达人 -->
+    <swiper-item>
+        <!-- 搜索框 -->
+        <view class="search-container">
+            <view class="search-left">
+                <image src="/pages/pic/发现/sousuo.png" />
+                <input type="text" placeholder="搜索"/>
+            </view>
+            <view class="search-right">
+                <image src="/pages/pic/发现/yuyin.png" />
+            </view>
+        </view> 
+        <!-- 达人详情 -->
+        <view class='main' wx:for="{{per_info}}">
+        <!-- 头像 -->
+            <view class='main-top'>
+                <image src='{{item.touxiang}}'></image>
+            </view>
+            <!-- 用户信息 -->
+            <view class='main-middle'> 
+                <view class='middle-top'>{{item.name}}</view>
+                <view class='middle-zhong'>公司：{{item.company}}</view>
+                <view class='middle-bottom'>航龄：{{item.year}}年</view>
+            </view>
+        </view>
+    </swiper-item>
+    <!-- 资讯 -->
+    <swiper-item>
+        <!-- 搜索框 -->
+        <view class="search-container">
+            <view class="search-left">
+                <image src="/pages/pic/发现/sousuo.png" />
+                <input type="text" placeholder="搜索"/>
+            </view>
+            <view class="search-right">
+                <image src="/pages/pic/发现/yuyin.png" />
+            </view>
+        </view> 
+        <!-- 资讯详情 -->
+        <view class='news-box' wx:for="{{newslist}}" bindtap="todetail" data-more="{{item}}">
+            <view class='news-img'>
+                <image src='{{item.src}}' mode="scaleToFill"></image>
+            </view>
+            <view class='news'> 
+                <view class='new-title'>{{item.title}}</view>
+                <view class='news-time'>{{item.time}}</view>
+            </view>
+        </view>
+    </swiper-item>
+</swiper>
